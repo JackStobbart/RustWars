@@ -1,0 +1,79 @@
+using UnityEngine;
+using System.Collections;
+
+public class CrosshairManager : MonoBehaviour {
+
+    public GameObject CrosshairBasic;
+    public GameObject CrosshairDamageOne;
+    public GameObject CrosshairDamageTwo;
+    public GameObject CrosshairHeavyOne;
+    public GameObject CrosshairHeavyTwo;
+    public GameObject CrosshairSpeedOne;
+    public GameObject CrosshairSpeedTwo;
+    public GameObject CrosshairUtilityOne;
+    public GameObject CrosshairUtilityTwo;
+
+    public GameObject CurrentCrosshair;
+
+    void Start () {
+	
+	}
+	
+	void Update () {
+        CurrentCrosshair = GameObject.FindGameObjectWithTag("Crosshair");
+	}
+
+    public void CrosshairBasicSpawn()
+    {
+        Destroy(CurrentCrosshair);
+        Instantiate(CrosshairBasic);
+    }
+
+    public void CrosshairDamageOneSpawn()
+    {
+        Destroy(CurrentCrosshair);
+        Instantiate(CrosshairDamageOne);
+    }
+
+    public void CrosshairDamageTwoSpawn()
+    {
+        Destroy(CurrentCrosshair);
+        Instantiate(CrosshairDamageTwo);
+    }
+
+    public void CrosshairHeavyOneSpawn()
+    {
+        Destroy(CurrentCrosshair);
+        Instantiate(CrosshairHeavyOne);
+    }
+
+    public void CrosshairHeavyTwoSpawn()
+    {
+        Destroy(CurrentCrosshair);
+        Instantiate(CrosshairHeavyTwo);
+    }
+
+    public void CrosshairSpeedOneSpawn()
+    {
+        Destroy(CurrentCrosshair);
+        Instantiate(CrosshairSpeedOne);
+    }
+
+    public void CrosshairSpeedTwoSpawn()
+    {
+        Destroy(CurrentCrosshair);
+        Instantiate(CrosshairSpeedTwo);
+    }
+
+    public void CrosshairUtilityOneSpawn()
+    {
+        Destroy(CurrentCrosshair);
+        Instantiate(CrosshairUtilityOne);
+    }
+
+    public void CrosshairUtilityTwoSpawn()
+    {
+        Destroy(CurrentCrosshair);
+        Instantiate(CrosshairUtilityTwo);
+    }
+}
