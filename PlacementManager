@@ -1,0 +1,48 @@
+using UnityEngine;
+using System.Collections;
+
+public class PlacementManager : MonoBehaviour {
+
+    public static PlacementManager instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
+
+    public GameObject standardTurretPrefab;
+    public GameObject advancedTurretPrefab;
+    public GameObject standardWallPrefab;
+    public GameObject advancedWallPrefab;
+
+　
+　
+    public void standardTurret()
+    {
+        turretToBuild = standardTurretPrefab;
+    }
+
+    public void advancedTurret()
+    {
+        turretToBuild = advancedTurretPrefab;
+    }
+
+    public void standardWall()
+    {
+        turretToBuild = standardWallPrefab;
+    }
+
+    public void advancedWall()
+    {
+        turretToBuild = advancedWallPrefab;
+    }
+
+　
+    private GameObject turretToBuild;
+
+    public GameObject GetTurretToBuild ()
+    {
+        return turretToBuild;
+    }
+
+}
