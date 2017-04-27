@@ -1,0 +1,17 @@
+using UnityEngine;
+using System.Collections;
+
+public class SoundManager : MonoBehaviour {
+
+    public AudioSource Sound1;
+    public AudioSource Sound2;
+
+    public void SoundOne()
+    {
+        Sound1.Play();
+    }
+    public void SoundTwo()
+    {
+        Sound2.Play();
+    }
+}
