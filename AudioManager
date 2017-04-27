@@ -1,0 +1,17 @@
+using UnityEngine;
+using System.Collections;
+
+public class AudioManager : MonoBehaviour
+{
+    public AudioSource music; 
+    static bool AudioBegin = false;
+    void Awake()
+    {
+        if (!AudioBegin)
+        {
+            music.Play();
+            DontDestroyOnLoad(gameObject);
+            AudioBegin = true;
+        }
+    }
+}
