@@ -1,0 +1,22 @@
+using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+
+public class PlayVideo : MonoBehaviour {
+
+    public MovieTexture Movement;
+    public MovieTexture Aiming;
+
+    // Use this for initialization
+    void Start () {
+        Movement.loop = true;
+        Aiming.loop = true;
+        Movement.Play();
+        Aiming.Play();
+    }
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+}
