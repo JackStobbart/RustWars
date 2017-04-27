@@ -1,0 +1,124 @@
+using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement; 
+
+public class MenuScript : MonoBehaviour {
+
+    public GameObject mainBlock;
+    public GameObject mainBlockDarken;
+    public GameObject secondaryBox;
+    public GameObject extendedBlock;
+    public GameObject optionsBlock;
+    public GameObject controlsBlock;
+    public GameObject creditsBlock;
+    public GameObject quitBlock;
+
+    public GameObject Controls1;
+    public GameObject Controls2;
+    public GameObject Controls3;
+    public GameObject Controls4;
+
+    void Start()
+    {
+        extendedBlock.SetActive(false);
+        mainBlock.SetActive(true);
+        optionsBlock.SetActive(false);
+        creditsBlock.SetActive(false);
+        quitBlock.SetActive(false);
+        controlsBlock.SetActive(false);
+        mainBlockDarken.SetActive(false);
+        secondaryBox.SetActive(false);
+    }
+
+　
+    public void Options()
+    {
+        extendedBlock.SetActive(false);
+        optionsBlock.SetActive(true);
+        creditsBlock.SetActive(false);
+        quitBlock.SetActive(false);
+        controlsBlock.SetActive(false);
+        mainBlockDarken.SetActive(true);
+        secondaryBox.SetActive(true);
+    }
+
+    public void Credits()
+    {
+        extendedBlock.SetActive(true);
+        optionsBlock.SetActive(false);
+        creditsBlock.SetActive(true);
+        quitBlock.SetActive(false);
+        controlsBlock.SetActive(false);
+        mainBlockDarken.SetActive(true);
+        secondaryBox.SetActive(false);
+    }
+
+    public void Quit()
+    {
+        extendedBlock.SetActive(false);
+        optionsBlock.SetActive(false);
+        creditsBlock.SetActive(false);
+        quitBlock.SetActive(true);
+        controlsBlock.SetActive(false);
+        mainBlockDarken.SetActive(true);
+        secondaryBox.SetActive(true);
+    }
+
+    public void Menu()
+    {
+        extendedBlock.SetActive(false);
+        optionsBlock.SetActive(false);
+        creditsBlock.SetActive(false);
+        quitBlock.SetActive(false);
+        controlsBlock.SetActive(false);
+        mainBlockDarken.SetActive(false);
+        secondaryBox.SetActive(false);
+    }
+
+    public void Controls()
+    {
+        extendedBlock.SetActive(true);
+        optionsBlock.SetActive(false);
+        creditsBlock.SetActive(false);
+        quitBlock.SetActive(false);
+        controlsBlock.SetActive(true);
+        mainBlockDarken.SetActive(true);
+        secondaryBox.SetActive(false);
+        Controls1.SetActive(true);
+        Controls2.SetActive(false);
+        Controls3.SetActive(false);
+        Controls4.SetActive(false);
+    }
+
+    public void ControlsPage1()
+    {
+        Controls1.SetActive(true);
+        Controls2.SetActive(false);
+        Controls3.SetActive(false);
+        Controls4.SetActive(false);
+    }
+
+    public void ControlsPage2()
+    {
+        Controls1.SetActive(false);
+        Controls2.SetActive(true);
+        Controls3.SetActive(false);
+        Controls4.SetActive(false);
+    }
+
+    public void ControlsPage3()
+    {
+        Controls1.SetActive(false);
+        Controls2.SetActive(false);
+        Controls3.SetActive(true);
+        Controls4.SetActive(false);
+    }
+
+    public void ControlsPage4()
+    {
+        Controls1.SetActive(false);
+        Controls2.SetActive(false);
+        Controls3.SetActive(false);
+        Controls4.SetActive(true);
+    }
+}
