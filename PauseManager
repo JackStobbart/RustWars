@@ -1,0 +1,52 @@
+using UnityEngine;
+using System.Collections;
+
+public class PauseScript : MonoBehaviour {
+
+    public GameObject quitPanel;
+    public GameObject pausePanel;
+    public bool paused;
+
+    void Start()
+    {
+        pausePanel.SetActive(false);
+        quitPanel.SetActive(false);
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (paused == true)
+            {
+                paused = false;
+                ContinueGame();
+            }
+            else if (paused == false)
+            {
+                paused = true;
+                PauseGame();
+            }
+        }
+               
+    }
+    private void PauseGame()
+    {
+        pausePanel.SetActive(true);
+        Time.timeScale = 0;
+    }
+    public void ContinueGame()
+    {
+        Time.timeScale = 1;
+        pausePanel.SetActive(false);
+    }
+
+    public void QuitMenu()
+    {
+        quitPanel.SetActive(true);
+    }
+
+    public void ExitQuitMenu()
+    {
+        quitPanel.SetActive(false);
+    }
+}
