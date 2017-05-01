@@ -41,47 +41,39 @@ public class BasicTankMovement : MonoBehaviour
 
                         if (Input.GetKey("up"))
                             {
-
-                                    transform.Translate(0, 0, transAmount);
-
+                                transform.Translate(0, 0, transAmount);
                             }
                         else if (Input.GetKey("w"))
                             {
-
                                 transform.Translate(0, 0, transAmount);
-
                             }
 
-                if (Input.GetKey("down"))
+                        if (Input.GetKey("down"))
                             {
-                            transform.Translate(0, 0, -transAmount);
+                                transform.Translate(0, 0, -transAmount);
                             }
-                else if (Input.GetKey("s"))
-                {
-
-                    transform.Translate(0, 0, -transAmount);
-
-                }
-
-                if (Input.GetKey("left"))
+                        else if (Input.GetKey("s"))
                             {
-                            transform.Rotate(0, -rotateAmount, 0);                    
+                                transform.Translate(0, 0, -transAmount);
                             }
-                else if (Input.GetKey("a"))
-                {
-                    transform.Rotate(0, -rotateAmount, 0);
-                }
 
-                if (Input.GetKey("right"))
+                        if (Input.GetKey("left"))
                             {
-                            transform.Rotate(0, rotateAmount, 0);
+                                transform.Rotate(0, -rotateAmount, 0);                    
                             }
-                else if (Input.GetKey("d"))
-                {
-                    transform.Rotate(0, rotateAmount, 0);
-                }
+                        else if (Input.GetKey("a"))
+                            {
+                                transform.Rotate(0, -rotateAmount, 0);
+                            }
 
-
+                        if (Input.GetKey("right"))
+                            {
+                                transform.Rotate(0, rotateAmount, 0);
+                            }
+                        else if (Input.GetKey("d"))
+                            {
+                                transform.Rotate(0, rotateAmount, 0);
+                            }
             }
         }
     }
